@@ -157,6 +157,7 @@ contract("SupplyChain", function (accounts) {
       await instance.addItem(name, price, { from: alice });
 
       const result = await instance.fetchItem.call(0);
+      console.log('RESULT => ', result[0])
 
       assert.equal(
         result[0],
